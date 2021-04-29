@@ -1,0 +1,34 @@
+{
+    "name": "proklung/arguments-resolvers-bundle",
+    "description": "Бандл с кастомными ресолверами аргументов для Symfony.",
+    "type": "symfony-bundle",
+    "keywords": [
+        "bitrix",
+        "symfony",
+        "symfony-bundle"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gavrilov Fedy",
+            "email": "fedor.gavrilov.75@mail.ru",
+            "homepage": "https://github.com/ProklUng"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ProklUng/arguments.resolvers.bundle/issues",
+        "source": "https://github.com/ProklUng/arguments.resolvers.bundle"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prokl\\ArgumentResolversBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "symfony/dependency-injection": "^3.4 || ^4.0 || ^5.0",
+        "symfony/http-kernel": "^4.0 || ^5.0",
+        "symfony/config": "~4|~5",
+        "symfony/string": "^4.0 || ^5.0"
+    }
+}

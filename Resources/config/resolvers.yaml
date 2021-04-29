@@ -1,0 +1,20 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  # Преобразование GET/POST параметров в переменные контроллера.
+  argument_resolvers.argument_resolver_query:
+    arguments: ['Prokl\ArgumentResolversBundle\Services\Interfaces\RequestQueryInterface']
+    class: Prokl\ArgumentResolversBundle\Services\ArgumentResolver\RequestParamsResolver
+    tags:
+      - { name: controller.argument_value_resolver, priority: 500000 }
+
+  # Массив рекурсивно прогоняется на предмет переменных и сервисов.
+  argument_resolvers.array_recursive:
+    arguments: ['@Prokl\ArgumentResolversBundle\Services\Supply\ResolveParamsFromContainer']
+    class: Prokl\ArgumentResolversBundle\Services\ArgumentResolver\ArrayRecursiveArgumentResolver
+    tags:
+      - { name: controller.argument_value_resolver, priority: 100}
+

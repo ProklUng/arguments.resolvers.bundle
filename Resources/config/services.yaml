@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  # Ресолвер переменных и сервисов из контейнера.
+  Prokl\ArgumentResolversBundle\Services\Supply\ResolveParamsFromContainer:
+    public: false
+    class: Prokl\ArgumentResolversBundle\Services\Supply\ResolveParamsFromContainer
+    calls:
+      - setContainer: ['@service_container']
+
