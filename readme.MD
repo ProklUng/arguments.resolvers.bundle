@@ -4,7 +4,7 @@ INTERNAL
 
 ## Установка
 
-`composer require prokl/arguments-resolvers-bundle`
+`composer require proklung/arguments-resolvers-bundle`
 
 ## Argument resolvers
 
