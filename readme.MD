@@ -8,8 +8,9 @@ INTERNAL
 
 ## Argument resolvers
 
-1) **RequestParamsResolver** - преобразует GET/POST/etc параметры контроллера в аргументы action 
-(если они не помечены в качестве атрибутов при описании роута)
+#### RequestParamsResolver 
+
+Преобразует GET/POST/etc параметры контроллера в аргументы action (если они не помечены в качестве атрибутов при описании роута)
 
 Признак контроллера, подлежащего обработке - интерфейс `RequestQueryInterface`
 
@@ -26,8 +27,9 @@ class QueryController extends AbstractController implements RequestQueryInterfac
 }
 ```
 
-2) **ArrayRecursiveArgumentResolver** - Массив, переданный как параметр в роут,
- рекурсивно прогоняется на предмет переменных и сервисов.
+#### ArrayRecursiveArgumentResolver
+
+Массив, переданный как параметр в роут, рекурсивно прогоняется на предмет переменных и сервисов.
 
 ### Управление
 
