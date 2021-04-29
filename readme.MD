@@ -12,6 +12,9 @@ INTERNAL
 (если они не помечены в качестве атрибутов при описании роута)
 
 Признак контроллера, подлежащего обработке - интерфейс `RequestQueryInterface`
+
+**Нюанс**: этот ресолвер должен запускаться раньше других. Сейчас его приоритет 50000. 
+
 ```php
 class QueryController extends AbstractController implements RequestQueryInterface
 {
@@ -22,8 +25,6 @@ class QueryController extends AbstractController implements RequestQueryInterfac
     }
 }
 ```
-
-**Нюанс**: этот ресолвер должен запускаться раньше других. Сейчас его приоритет 50000. 
 
 2) **ArrayRecursiveArgumentResolver** - Массив, переданный как параметр в роут,
  рекурсивно прогоняется на предмет переменных и сервисов.
