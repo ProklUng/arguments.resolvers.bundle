@@ -22,7 +22,7 @@
     "autoload": {
         "psr-4": {
             "Prokl\\ArgumentResolversBundle\\": "",
-            "Prokl\\ArgumentResolversBundle\\Tests": "Tests"
+            "Prokl\\ArgumentResolversBundle\\Tests\\": "Tests"
         },
         "exclude-from-classmap": [
             "Tests/"
