@@ -21,8 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Prokl\\ArgumentResolversBundle\\": ""
-        }
+            "Prokl\\ArgumentResolversBundle\\": "",
+            "Prokl\\ArgumentResolversBundle\\Tests": "Tests"
+        },
+        "exclude-from-classmap": [
+            "Tests/"
+        ]
     },
     "require": {
         "php": ">=7.3",
@@ -30,5 +34,8 @@
         "symfony/http-kernel": "^4.0 || ^5.0",
         "symfony/config": "~4|~5",
         "symfony/string": "^4.0 || ^5.0"
+    },
+    "require-dev": {
+        "proklung/phpunit-testing-tools": "^1.0"
     }
 }
